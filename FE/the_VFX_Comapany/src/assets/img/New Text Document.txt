@@ -1,0 +1,2 @@
+client: 2 video land, 3 poster port
+client 2: 3 poster square, 1 portrait

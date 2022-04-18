@@ -1,0 +1,146 @@
+.footer{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    background-color: #3c3c3c;
+}
+
+.logo{
+    position: relative;
+    display: flex;
+    padding: 1vw 0;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 1vw 0;
+    width: 100%;
+    height: auto;
+}
+
+.logo img{
+    position: relative;
+    width: auto;
+    height: 7vw;
+}
+
+.text{
+    position: relative;
+    padding: 0 25%;
+    text-align: center;
+    color: #b5b5b5;
+    font-size: 1.2vw;
+    font-family: 'Inter';
+    font-weight: 400;
+    margin: 2vw 0;
+}
+
+.contact{
+    position: relative;
+    display: inline-block;
+    padding: 0 25%;
+    width: 50%;
+    color: white;
+    font-family: 'Inter';
+    font-size: 1.2vw;
+}
+
+.mobile{
+    position: relative;
+    float: left;
+    padding:0;
+    margin: 0;
+    width: 50%;
+    font-weight: 500;
+    line-height: 1.2vw;
+}
+
+.email{
+    position: relative;
+    float: left;
+    text-align: right;
+    padding:0;
+    margin: 0;
+    width: 50%;
+    font-weight: 500;
+}
+
+.icon{
+    height: 1.2vw;
+}
+
+.socialmediaIcons{
+    position: relative;
+    display: flex;
+    width: 30%;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 35%;
+    margin: 2vw 0;
+}
+
+.socialmediaIcons img{
+    position: relative;
+    width: 3vw;
+    height: 3vw;
+}
+
+.copyright{
+    position: relative;
+    // bottom: 0;
+    width: 100%;
+    background-color: #282828;
+    color: #DFDFDF;
+    font-size: 1vw;
+    text-align: center;
+
+}
+
+.copyright p{
+    margin: 0;
+    padding: 0.25vw;
+}
+
+@media screen and (max-width:600px) {
+
+    .logo{
+        position: relative;
+        margin: 5vw 0;
+        // height: auto;
+    }
+
+    .logo img{
+        height: 12vw;
+    }
+
+    .text{
+        font-size: 3vw;
+        padding: 0 10%;
+    }
+
+    .socialmediaIcons{
+        width: 50%;
+        padding: 0 25%;
+        margin: 5vw 0;
+    }
+
+    .socialmediaIcons img{
+        width: 5vw;
+        height: 5vw;
+    }
+
+    .copyright{
+        font-size: 2vw;
+    }
+
+    .contact{
+        font-size: 2.2vw;
+        padding: 0 10%;
+        width: 80%;
+    }
+
+    .icon{
+        height: 2.2vw;
+    }
+
+}

@@ -1,0 +1,20 @@
+<navbar></navbar>
+<div class="aboutUs">
+    <h3 class="aboutUs-title">About Us</h3>
+    <p class="aboutUs-text">The VFX Company is a firm which focuses on providing services to other companies who want to make and increase their company reach through social media handles.We showcase brand’s content to explain their context with creativity and an experience. We also provide services to those companies who are on their initial phase and strive to turn their ideas into reality. We at TVC provide services like 3D product visualization, Social media poster designs, Logo animation, Graphic Design video, Website Development, Mobile App Development, Motion Graphics, Brochure Design. We are not just into graphic designing but we are also providing sustainable solution to startup’s and businesses by providing opportunity to be part of our online digital marketing platform.</p>
+</div>
+<div class="myTeam">
+    <h3 class="team-title">Our Team</h3>
+    <div class="cards">
+        <div *ngFor="let item of list" class="card">
+            <div class="card-image">
+                <img [src]="item.img" class="image">
+            </div>
+            <div class="card-heading">
+                <h3 class="name">{{item.title}}</h3>
+                <h3 class="position">{{item.position}}</h3>
+            </div>
+        </div>
+    </div>
+</div>
+<footer></footer>

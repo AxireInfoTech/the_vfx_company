@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+body,html{
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    padding-top: 5vw;
+}
+
+@media screen and (max-width:600px) {
+    body{
+        padding-top: 12vw;
+    }
+}

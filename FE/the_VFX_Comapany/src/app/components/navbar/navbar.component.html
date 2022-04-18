@@ -1,0 +1,30 @@
+<div class="nav-body">
+    <img class="logo" src="../../../assets/img/logo.png" alt="Logo" routerLink="/home">
+    <button class="contact" routerLink="/contactus">Let's Talk</button>
+    <div class="nav-items">
+        <h3 class="nav-item" routerLink="/home">Home</h3>
+        <h3 class="nav-item" routerLink="/offerings">Our Offerings
+            <!-- <img class="down-arrow" src="../../../assets/icons/keyboard_arrow_down.svg"> -->
+        </h3>
+        <h3 class="nav-item" routerLink="/aboutus">About Us</h3>
+    </div>
+</div>
+
+<div class="nav-mob">
+    <img src="../../../assets/icons/hamburger.svg" class="hamburger" (click)="toggleMenu(true)">
+    <div class="logo-space">
+        <img src="../../../assets/img/logo.png" alt="absdds" class="logo-mob">
+    </div>
+    <div class="nav-menu" *ngIf="isMenuOpen">
+        <img src="../../../assets/icons/close.svg" class="hamburger" (click)="toggleMenu(false)">
+        <div class="logo-space">
+            <img src="../../../assets/img/logo.png" alt="absdds" class="logo-mob">
+        </div>
+        <div class="nav-items-mob">
+            <h3 class="nav-item-mob" routerLink="/home">Home</h3>
+            <h3 class="nav-item-mob" routerLink="/offerings">Our Offerings</h3>
+            <h3 class="nav-item-mob" routerLink="/aboutus">About Us</h3>
+            <h3 class="nav-item-mob" routerLink="/contactus">Contact Us</h3>
+        </div>
+    </div>
+</div>

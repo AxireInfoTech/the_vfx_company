@@ -1,0 +1,229 @@
+div{
+    margin: 0;
+    padding:0;
+}
+.send-body{
+    position: relative;
+    display: inline-block;
+    width: 90%;
+    margin: 0 5%;
+    margin-bottom: 10vw;
+    margin-top: 5vw;
+    height: auto;
+    border-radius: 1.5vw;
+    overflow: hidden;
+    background-color: #FFF4F0;
+}
+
+.left{
+    position: relative;
+    float: left;
+    width: 45%;
+    box-sizing: border-box;
+    padding: 5vw;
+    height: 40vw;
+    // background-color: grey;
+}
+
+.label{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-size: 1.3vw;
+    font-family: 'Inter';
+    font-weight: 400;
+}
+
+.input-text{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 84%;
+    height: 2.2vw;
+    font-size: 1.2vw;
+    font-family: 'Inter';
+    font-weight: 500;
+    outline: none;
+    border: none;
+    border-radius: 0.5vw;
+    padding:0;
+    // box-sizing: border-box;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.input-area{
+    // position: relative;
+    width: 84%;
+    height: 10vw;
+    font-size: 1.2vw;
+    font-family: 'Inter';
+    font-weight: 500;
+    resize: none;
+    outline: none;
+    border: none;
+    border-radius: 0.5vw;
+    padding:0;
+    // box-sizing: border-box;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.input-text:focus, .input-area:focus{
+    border: 0.15vw solid #FF4600;
+}
+
+.area-temp{
+    position: relative;
+    margin-top: 0.3vw;
+    margin-bottom: 1.5vw;
+    width: 100%;
+    height: 2.2vw;
+}
+
+.area-temp2{
+    position: relative;
+    margin-top: 0.3vw;
+    margin-bottom: 1.5vw;
+    width: 100%;
+    height: 10vw;
+}
+
+.icon{
+    position: absolute;
+    height: 1.2vw;
+    width: 1.2vw;
+    left: 0.6vw;
+    top: 0.6vw;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.edit-ico{
+    position: absolute;
+    height: 1.2vw;
+    width: 1.2vw;
+    left: 0.6vw;
+    top: 0.6vw;
+}
+
+.send{
+    position: relative;
+    cursor: pointer;
+    height: 2.5vw;
+    width: 14vw;
+    text-transform: none;
+    border: none;
+    border-radius: 0.5vw;
+    margin-top: 2vw;
+    font-family: 'Inter';
+    font-size: 1.2vw;
+    font-weight: 700;
+    color: #FFFFFF;
+    background-color: #FF4600;
+}
+
+.cursor-not-allowed{
+    cursor: not-allowed;
+}
+
+.right{
+    position: relative;
+    float: left;
+    width: 55%;
+    height: 40vw;
+    // background-color: green;
+}
+
+.contact-img{
+    height: 28vw;
+    width: auto;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    border-radius: 2vw;
+    transform: translate(-50%,-50%);
+}
+
+.successStatus{
+    display: inline-block;
+    padding: 0 8%;
+}
+.success{
+    color: rgb(20, 83, 45);
+}
+
+.error{
+    color:rgb(185, 28, 28);
+}
+
+@media screen and (max-width:600px) {
+    .send-body{
+        border-radius: 2vw;
+    }
+
+    .left{
+        width: 100%;
+        height: 90vw;
+    }
+
+    .label{
+        font-size: 3vw;
+    }
+
+    .area-temp{
+        height: 6vw;
+        margin-top: 1vw;
+        margin-bottom: 3vw;
+    }
+
+    .input-text{
+        height: 6vw;
+        width: 84%;
+        font-size: 3vw;
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+
+    .area-temp2{
+        height: 30vw;
+        margin-top: 1vw;
+        margin-bottom: 3vw;
+    }
+
+    .input-area{
+        height: 30vw;
+        width: 80%;
+        font-size: 3vw;
+        padding-left: 10%;
+        padding-right: 10%;  
+    }
+
+    .icon{
+        height: 4vw;
+        width: 4vw;
+        left: 1vw;
+        top: 1vw;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .edit-ico{
+        height: 4vw;
+        width: 4vw;
+        left: 1vw;
+        top: 1vw;
+    }
+
+    .send{
+        height: 6vw;
+        width: 34vw;
+        font-size: 2.4vw;
+        border-radius: 2vw;
+        margin-top: 5vw;
+    }
+
+    .right{
+        display: none;
+    }
+}

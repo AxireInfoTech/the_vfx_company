@@ -1,0 +1,254 @@
+.client-main {
+  font-family: "Inter";
+  position: relative;
+  width: 100%;
+  display: inline-block;
+  height: auto;
+  // background-color: #00B28790;
+  background-color: #fff4f0;
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 3vw;
+}
+
+// .client-head {
+//   padding: 0;
+//   margin: 0;
+//   font-size: 3vw;
+//   font-family: "Raleway";
+//   text-align: center;
+//   // color: #FFFFFF;
+//   font-weight: 700;
+// }
+
+.client-area {
+  width: 80%;
+  margin: 0 5%;
+  margin-top: 2vw;
+  padding: 0 5%;
+  border: solid 2px #f54504;
+  border-radius: 5%;
+  // justify-content: center;
+  // align-items: center;
+}
+
+.client-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 35%;
+    margin: 2vw;
+  }
+}
+
+.client-description {
+  padding: 2vw;
+  border-radius: 2vw;
+  background-color: #fff;
+  margin: 2vw 0;
+  p {
+    font-weight: bold;
+    font-size: 1vw;
+    a {
+      text-decoration: none;
+      color: black;
+    }
+    img {
+      height: 0.75vw;
+      margin: 0 0.25vw;
+    }
+  }
+  h1 {
+    font-weight: bolder;
+    font-size: 2vw;
+  }
+}
+
+.icon {
+  position: relative;
+  height: 8vw;
+  min-width: 8%;
+  margin-left: 4%;
+  margin-right: 4%;
+  cursor: pointer;
+  // background-color: grey;
+}
+
+.jyoti {
+  height: 5vw;
+}
+
+.client-review {
+  position: relative;
+  width: 100%;
+  .client-review-image {
+    float: left;
+    width: 40vw;
+    height: 50vw;
+    background-image: url("../../../assets/img/client-review.svg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      text-align: right;
+      font-size: 4vw;
+      width: 70%;
+    }
+  }
+  .client-review-text {
+    float: right;
+    width: 40vw;
+    padding: 0 5vw;
+    height: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .client-review-text-child {
+      width: 80vw;
+      img {
+        width: 20%;
+      }
+      p {
+        color: #585c65;
+        width: 80%;
+        font-size: 1.4vw;
+        line-height: 2vw;
+      }
+      h1 {
+        font-size: 2.5vw;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .client-main {
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .client-head {
+    font-size: 5vw;
+    font-weight: 600;
+  }
+
+  .client-area {
+    position: relative;
+    width: 80%;
+    margin: 0 5%;
+    margin-top: 5vw;
+    padding: 3vw 5%;
+    border-radius: 20px;
+    justify-content: center;
+    border: 0px;
+    // align-items: center;
+    background-color: #fff;
+  }
+
+  .client-logo {
+    position: relative;
+    width: 35%;
+    border-radius: 5vw;
+    padding: 2%;
+    border: 1px solid #F7713F;
+    background-color: #fff4f0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: right;
+
+    img {
+      width: 100%;
+      // margin: 5vw;
+      border-radius: 20px;
+      margin: 0;
+    }
+  }
+
+  .client-description {
+    position: relative;
+    width: 56%;
+    padding: 2%;
+    border-radius: 2vw;
+    background-color: #fff;
+    margin: 2% 0;
+    float: left;
+    p {
+      font-weight: bold;
+      font-size: 3vw;
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      img {
+        height: 1.85vw;
+        margin: 0 0.25vw;
+      }
+    }
+    h1 {
+      font-weight: bolder;
+      font-size: 5vw;
+    }
+  }
+
+  .icon {
+    height: 15vw;
+    min-width: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  // .jyoti {
+  //   // height: 10vw;
+  // }
+
+  .client-review {
+    position: relative;
+    width: 100vw;
+    .client-review-image {
+      float: left;
+      width: 100vw;
+      height: auto;
+      background-image: none;
+      background-color: #fff;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      h1 {
+        text-align: center;
+        font-size: 8vw;
+        width: 70%;
+      }
+    }
+    .client-review-text {
+      float: left;
+      width: 90vw;
+      padding: 10vw 5vw;
+      height: 50vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .client-review-text-child {
+        width: 80vw;
+        img {
+          width: 10%;
+        }
+        p {
+          width: 100%;
+          font-size: 4vw;
+          line-height: 5vw;
+        }
+        h1 {
+          font-size: 5vw;
+        }
+      }
+    }
+  }
+}
