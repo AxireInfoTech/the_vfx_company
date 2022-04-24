@@ -20,8 +20,8 @@ module.exports = {
         'aboutus': "url('./assets/img/aboutus-bg.png')",
         'aboutusClients': "url('./assets/img/aboutus-clients-bg.png')",
         'ourOffering': "url('./assets/img/ourOffering-bg.png')",
-        'homebutton': 'linear-gradient(111.32deg, #3D5374 -9.86%, #151F25 100%)'
-
+        'homebutton': 'linear-gradient(111.32deg, #3D5374 -9.86%, #151F25 100%)',
+        'clientReview': "url('./assets/img/client-review.svg')",
       },
       borderImage: {
         'ourOffering': "url('./assets/img/our-offering-border.png')"

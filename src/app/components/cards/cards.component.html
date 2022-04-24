@@ -1,12 +1,14 @@
 <!-- <app-card *ngFor="let item of list" [heading]='item'></app-card> -->
 <!-- <p>working</p> -->
-<div class="cards">
-    <h3 class="title">Curated Work</h3>
-    <div *ngFor="let item of list" class="card">
-        <div class="card-image">
-            <img [src]="item.img" class="image">
+<div class="">
+    <h3 class="font-bold text-5xl text-center">Curated Work</h3>
+    <div class="grid grid-cols-3 px-36 py-16 gap-12">
+        <div *ngFor="let item of list" class=" rounded-3xl bg-[#fff4f0]">
+            <div class="w-full">
+                <img [src]="item.img" class="w-1/2 m-auto">
+            </div>
+            <h3 class="text-lg font-semibold bg-[#ff4500] text-white px-4 py-2 rounded-b-3xl">{{item.title}}</h3>
+            <!-- <img class="arrow" src="../../../assets/icons/coolicon.svg"> -->
         </div>
-        <h3 class="card-heading">{{item.title}}</h3>
-        <!-- <img class="arrow" src="../../../assets/icons/coolicon.svg"> -->
     </div>
 </div>

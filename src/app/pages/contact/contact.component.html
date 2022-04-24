@@ -67,10 +67,10 @@
                 <p>Find on social media</p>
             </div>
             <div class="text-2xl font-semibold text-center my-4 flex justify-evenly px-6">
-                <a class="m-2" href=""><img src="../../../assets/icons/instagram.png" alt=""></a>
-                <a class="m-2" href=""><img src="../../../assets/icons/linkedin.png" alt=""></a>
-                <a class="m-2" href=""><img src="../../../assets/icons/facebook.png" alt=""></a>
-                <a class="m-2" href=""><img src="../../../assets/icons/pinterest.png" alt=""></a>
+                <a class="m-2" href="https://www.instagram.com/the_vfxcompany/"><img src="../../../assets/icons/instagram.png" alt=""></a>
+                <a class="m-2" href="https://www.linkedin.com/company/thevfxcompany/"><img src="../../../assets/icons/linkedin.png" alt=""></a>
+                <a class="m-2" href="https://www.facebook.com/thevfxcompany/"><img src="../../../assets/icons/facebook.png" alt=""></a>
+                <a class="m-2" href="https://in.pinterest.com/Thevfxcompany/_created/"><img src="../../../assets/icons/pinterest.png" alt=""></a>
 
             </div>
         </div>
@@ -138,15 +138,15 @@
 <div class="w-full p-12 px-36 sm:px-12">
     <div class="w-full my-4">
             <label class="block w-full font-bold text-xl " for="name">Name</label>
-            <input id="name" class="w-full border-b-[1px] text-2xl sm:text-xl border-black " placeholder="Your name goes here" type="text">
+            <input id="name" [(ngModel)]="name" class="w-full border-b-[1px] text-2xl sm:text-xl border-black " placeholder="Your name goes here" type="text">
     </div>
     <div class="w-full my-4">
         <label class="block w-full font-bold text-xl " for="mail">Mail</label>
-        <input id="mail" class="w-full border-b-[1px] text-2xl sm:text-xl border-black " placeholder="Enter your email address here" type="text">
+        <input id="mail" [(ngModel)]="email" class="w-full border-b-[1px] text-2xl sm:text-xl border-black " placeholder="Enter your email address here" type="text">
     </div>
     <div class="w-full my-4">
         <label class="block w-full font-bold text-xl " for="message">Message</label>
-        <textarea id="message" class="w-full border-b-[1px] text-2xl sm:text-xl border-black h-24 sm:h-36" placeholder="Your message goes here..." type="text"></textarea>
+        <textarea id="message" [(ngModel)]="message" class="w-full border-b-[1px] text-2xl sm:text-xl border-black h-24 sm:h-36" placeholder="Your message goes here..." type="text"></textarea>
     </div>
     <div>
         <button class="bg-[#FD6A5E] text-white text-2xl font-bold w-fit p-2 px-4 rounded-sm"> <img class="h-6 inline-block " src="../../../assets/icons/bi_send-fill.png" alt=""> Send</button>
