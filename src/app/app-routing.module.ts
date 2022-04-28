@@ -38,7 +38,12 @@ const routes: Routes = [
   { 
     path: 'aboutus',
     loadChildren: () => import('./pages/about-us/about-us.module').then(m => m.AboutUsModule) 
-  }
+  },
+  { 
+    path: 'admin',
+    loadChildren: () => import('./pages/admin/admin.module').then(m => m.AdminModule) 
+  },
+  { path: '**', redirectTo: '', pathMatch: 'full' }
 
 ];
 
