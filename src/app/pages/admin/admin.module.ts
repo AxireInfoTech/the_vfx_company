@@ -9,6 +9,7 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EditOurPortfolioComponent } from './edit-our-portfolio/edit-our-portfolio.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     EditGarageComponent,
     AdminLoginComponent,
     AdminPanelComponent,
+    EditOurPortfolioComponent,
   ],
   imports: [
     CommonModule,

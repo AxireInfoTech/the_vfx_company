@@ -47,4 +47,8 @@ export class GalleryComponent implements OnInit {
     
   }
 
+  getLink(id: string){
+   return  "https://www.youtube.com/embed/"+id+"?playlist="+id+"&loop=1"
+  }
+
 }

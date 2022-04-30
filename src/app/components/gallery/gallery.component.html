@@ -1,6 +1,7 @@
-<div class="min-h-screen min-w-full grid grid-cols-2 p-12 gap-4">
-        <div *ngFor="let item of posts">
-                <iframe  src="https://www.youtube.com/embed/M9oR5xUzZBQ?playlist=M9oR5xUzZBQ&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h1 class="text-4xl font-semibold text-center py-8">{{ client }}</h1>
 
+<div class="min-h-screen min-w-full grid grid-cols-2 sm:grid-cols-1 p-24 sm:p-4 gap-8 sm:gap-4">
+        <div class="h-96" *ngFor="let item of posts; let i = index" [ngClass]="{' row-span-2 col-span-2 ': (i+1)%3 == 0}">
+                <iframe  [src]="getLink(item) | safe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
 </div>
