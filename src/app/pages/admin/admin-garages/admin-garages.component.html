@@ -1,0 +1,21 @@
+<div>
+    <div class="p-4" *ngFor="let item of garagesData">
+        <p>{{item.garage_name}}</p>
+        <p>{{item.garage_mail}}</p>
+        <p>{{item.garage_mobile}}</p>
+        <p>{{item.address}}</p>
+        <p>{{item.city}}</p>
+        <p>{{item.pin_code}}</p>
+        <p>{{item.gst_in}}</p>
+        <p>{{item.location}}</p>
+        <p>{{item.password}}</p>
+
+    </div>
+</div>
+
+
+<p>admin-garages works!</p>
+<button (click)="onLogIn()">Log In</button>
+<button (click)="onRead()">Read Data</button>
+<button (click)="onBook()">Book</button>
+

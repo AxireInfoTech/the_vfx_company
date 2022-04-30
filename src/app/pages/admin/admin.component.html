@@ -1,1 +1,35 @@
-<p>admin works!</p>
+<div class="h-96 flex items-center justify-center bg-buggyyellow">
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+        <div class="p-2">
+          <label class="text-xl block">
+            user name:
+        </label>
+
+            <input class="rounded-sm text-xl p-1" formControlName="userName" placeholder="Your user name">
+          <div *ngIf="myForm.get('userName').invalid && (myForm.get('userName').dirty || myForm.get('userName').touched)">
+            Please provide a user name.
+          </div>
+        </div>
+        <div class="p-2">
+          <label class="text-xl block">
+            Password:
+        </label>
+
+            <input class="rounded-sm text-xl p-1" formControlName="password" placeholder="Your password">
+          <div *ngIf="myForm.get('password').invalid && (myForm.get('password').dirty || myForm.get('password').touched)">
+            Please provide a valid email address.
+          </div>
+        </div>
+        <!-- <div>
+          <label>
+            Message:
+            <input formControlName="message" placeholder="Your message">
+          </label>
+          <div *ngIf="myForm.get('message').invalid && (myForm.get('message').dirty || myForm.get('message').touched)">
+            Messages must be at least 15 characters long.
+          </div>
+        </div> -->
+        <button class="my-4 p-2 rounded-md font-semibold bg-buggyorange text-white " type="submit" [disabled]="myForm.invalid">Log In</button>
+    </form>
+</div>
+  

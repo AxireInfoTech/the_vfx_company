@@ -1,0 +1,14 @@
+<div class="p-4">
+    <div>
+        <button class="bg-buggyorange p-3 rounded-lg" (click)="onCreate()">create New Client</button>
+    </div>
+    <div class="p-4 my-2 grid grid-cols-1 gap-4 bg-buggyyellow rounded-lg" *ngFor="let item of clientData">
+        <p>name: {{item.name}}</p>
+        <p>img: {{item.img}}</p>
+        <p>Posts: <span class="mx-2" *ngFor="let post of item.posts"> --> {{ post }}   </span></p>
+        <div>
+            <button class="p-2 m-2 rounded-lg bg-buggyorange" (click)="onEdit(item)">Edit Client</button>
+            <button class="p-2 m-2 rounded-lg bg-buggyorange" (click)="onDelete(item.id)">Delete Client</button>
+        </div>
+    </div>
+</div>
