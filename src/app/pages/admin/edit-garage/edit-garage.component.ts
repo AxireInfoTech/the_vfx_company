@@ -13,6 +13,7 @@ export class EditGarageComponent implements OnInit {
   clientData: client = {
     id: '',
     name: '',
+    review: '',
     img: '',
     posts: [],
     

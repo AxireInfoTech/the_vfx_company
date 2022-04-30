@@ -20,6 +20,7 @@ export class AdminPanelComponent implements OnInit {
     if(this.adminService.admin_username == '' && this.adminService.admin_password == ''){
       this.router.navigate(['/admin/login']);
     }
+    this.readPortfolio()
     this.readGarages();
   }
 
@@ -27,12 +28,20 @@ export class AdminPanelComponent implements OnInit {
     this.router.navigate(['/admin/create']);
   }
 
+  readPortfolio(){
+    this.adminService.readOurPortfolio().subscribe(res=>{
+      console.log(res)
+      this.adminService.ourPortfolioPosts = res.posts
+      this.ourPortfolioPosts = res.posts
+    })
+  }
+
   readGarages(){
     this.adminService.readGarages().subscribe(res=>{
       // console.log(res)
       this.adminService.clientData = []
       for(const item in res){
-        this.adminService.clientData.push({id: item, name: res[item].name, img: res[item].img, posts: res[item].posts})
+        this.adminService.clientData.push({id: item, name: res[item].name, review: res[item].review, img: res[item].img, posts: res[item].posts})
       }
       this.clientData = this.adminService.clientData
       console.log(this.clientData)
@@ -43,13 +52,14 @@ export class AdminPanelComponent implements OnInit {
   }
 
   onEdit(item: client){
-    
+    this.adminService.editClientData = item;
+    this.router.navigate(['/admin/edit']);
 
   }
 
   onEditPosts(){
     this.adminService.ourPortfolioPosts = this.ourPortfolioPosts;
-    this.router.navigate(['/admin/edit']);
+    this.router.navigate(['/admin/edit-ourportfolio']);
   }
 
   onDelete(id:string){

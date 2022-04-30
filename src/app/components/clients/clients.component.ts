@@ -23,7 +23,7 @@ export class ClientsComponent implements OnInit {
       // console.log(res)
       this.adminService.clientData = []
       for(const item in res){
-        this.adminService.clientData.push({id: item, name: res[item].name, img: res[item].img, posts: res[item].posts})
+        this.adminService.clientData.push({id: item, name: res[item].name, review: res[item].review, img: res[item].img, posts: res[item].posts})
       }
       this.clientData = this.adminService.clientData;
 
