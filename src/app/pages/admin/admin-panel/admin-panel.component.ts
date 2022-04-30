@@ -12,6 +12,7 @@ import { AdminService } from 'src/app/services/admin.service';
 export class AdminPanelComponent implements OnInit {
 
   clientData: client[] = [];
+  ourPortfolioPosts: string[] = [];
 
   constructor(private adminService: AdminService,private router : Router) { }
 
@@ -42,9 +43,13 @@ export class AdminPanelComponent implements OnInit {
   }
 
   onEdit(item: client){
-    this.adminService.editClientData = item;
-    this.router.navigate(['/admin/edit']);
+    
 
+  }
+
+  onEditPosts(){
+    this.adminService.ourPortfolioPosts = this.ourPortfolioPosts;
+    this.router.navigate(['/admin/edit']);
   }
 
   onDelete(id:string){

@@ -15,6 +15,7 @@ export class AdminService implements OnInit {
   emptyClientData: client;
   admin_username:string = 'test';
   admin_password:string = 'test';
+  ourPortfolioPosts: string[];
 
   constructor(private http: HttpClient) { }
 
@@ -56,6 +57,11 @@ export class AdminService implements OnInit {
     
 
     return this.http.patch<any>('https://the-vfx-company-default-rtdb.firebaseio.com/client/'+client.id+'/.json',{ id : '', name: client.name, img: client.img, posts: client.posts });
+  }
+
+  readOurPortfolio(){
+    return this.http.get<any>("https://the-vfx-company-default-rtdb.firebaseio.com/ourportfolio.json");
+
   }
 
 }
