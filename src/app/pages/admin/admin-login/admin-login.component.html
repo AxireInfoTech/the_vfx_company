@@ -1,0 +1,9 @@
+<div class="h-screen w-screen flex items-center justify-center bg-buggyyellow">
+    <div class="w-2/5 grid grid-cols-1 gap-4">
+            <!-- <label for="garage_name">Garage Name</label> -->
+            <input class="h-10 rounded-lg bg-white/25 p-4" type="text" id="garage_name" [(ngModel)]="admin_username" placeholder="User Name">
+            <!-- <label for="password">password</label> -->
+            <input class="h-10 rounded-lg bg-white/25 p-4" type="password" id="password" [(ngModel)]="admin_password" placeholder="Password">
+            <button class="bg-buggyorange p-3 rounded-lg" (click)="onLogin()">Log In</button>
+    </div>
+</div>

@@ -11,6 +11,7 @@ import { NavbarModule } from './components/navbar/navbar.module';
 import { ImgDataService } from './services/img-data.service';
 import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
 import { TermsAndConditionsComponent } from './pages/terms-and-conditions/terms-and-conditions.component';
+import { AdminModule } from './pages/admin/admin.module';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { TermsAndConditionsComponent } from './pages/terms-and-conditions/terms-
     CommonModule,
     AppRoutingModule,
     NavbarModule,
-    FooterModule
+    FooterModule,
+    AdminModule
   ],
   providers: [ImgDataService],
   bootstrap: [AppComponent]

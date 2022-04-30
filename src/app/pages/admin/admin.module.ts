@@ -1,15 +1,31 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AdminComponent } from './admin.component';
 
+import { AdminRoutingModule } from './admin-routing.module';
+import { AdminComponent } from './admin.component';
+import { CreateGarageComponent } from './create-garage/create-garage.component';
+import { EditGarageComponent } from './edit-garage/edit-garage.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { AdminPanelComponent } from './admin-panel/admin-panel.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
-    AdminComponent
+    AdminComponent,
+    // AdminGaragesComponent,
+    CreateGarageComponent,
+    EditGarageComponent,
+    AdminLoginComponent,
+    AdminPanelComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    AdminRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    FormsModule
   ]
 })
 export class AdminModule { }

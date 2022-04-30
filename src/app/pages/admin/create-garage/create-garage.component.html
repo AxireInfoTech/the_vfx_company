@@ -1,0 +1,35 @@
+<div class="h-screen w-screen flex items-center justify-center bg-buggyyellow">
+    <div class="w-2/5 grid grid-cols-1 gap-4">
+        <input class="h-10 rounded-lg bg-white/25 p-4" type="text" id="client_name" [(ngModel)]="clientData.name" placeholder="Client Name">
+    
+        <input class="h-10 rounded-lg bg-white/25 p-4" type="text" id="img" [(ngModel)]="clientData.img" placeholder="image">
+        <div class="grid grid-cols-3" *ngFor="let item of clientData.posts; let i = index">
+            <input class="h-10 rounded-lg bg-white/25 p-4" type="text" [(ngModel)]="clientData.posts[i]" placeholder="youtube video id">
+
+            <button class="p-2 bg-buggyorange rounded-lg mx-4" (click)="onDeletePost(i)">delete</button>
+        </div>
+        <div>
+            <button class=" rounded-lg p-2 bg-buggyorange" (click)="onAddNewPost()">add new post</button>
+        </div>
+
+    <!-- <div>
+        <label for="location">location</label>
+        <input type="text" id="location" [(ngModel)]="garageData.location" placeholder="location">
+    </div> -->
+    
+        <!-- <input class="h-10 rounded-lg bg-white/25 p-4" type="text" id="city" [(ngModel)]="garageData.city" placeholder="city">
+    
+        <input class="h-10 rounded-lg bg-white/25 p-4" type="text" id="address" [(ngModel)]="garageData.address" placeholder="address">
+    
+        <input class="h-10 rounded-lg bg-white/25 p-4" type="text" id="pin_code" [(ngModel)]="garageData.pin_code" placeholder="pin code">
+    
+        <input class="h-10 rounded-lg bg-white/25 p-4" type="text" id="garage_mobile" [(ngModel)]="garageData.garage_mobile" placeholder="mobile No">
+    
+        <input class="h-10 rounded-lg bg-white/25 p-4" type="email" id="garage_mail" [(ngModel)]="garageData.garage_mail" placeholder="mail"> -->
+    
+        <button class="bg-buggyorange p-3 rounded-lg" type="button" (click)="onCreateClient()" >Create Client</button>
+
+    </div>
+    
+
+</div>
