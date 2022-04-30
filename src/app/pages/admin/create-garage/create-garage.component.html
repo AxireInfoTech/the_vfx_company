@@ -1,8 +1,9 @@
-<div class="h-screen w-screen flex items-center justify-center bg-buggyyellow">
+<div class="min-h-screen min-w-screen flex items-center justify-center bg-buggyyellow p-12">
     <div class="w-2/5 grid grid-cols-1 gap-4">
         <input class="h-10 rounded-lg bg-white/25 p-4" type="text" id="client_name" [(ngModel)]="clientData.name" placeholder="Client Name">
     
         <input class="h-10 rounded-lg bg-white/25 p-4" type="text" id="img" [(ngModel)]="clientData.img" placeholder="image">
+        <textarea class="h-60 rounded-lg bg-white/25 p-4" name="review" id="" cols="30" rows="10" [(ngModel)]="clientData.review" placeholder="review..."></textarea>
         <div class="grid grid-cols-3" *ngFor="let item of clientData.posts; let i = index">
             <input class="h-10 rounded-lg bg-white/25 p-4" type="text" [(ngModel)]="clientData.posts[i]" placeholder="youtube video id">
 

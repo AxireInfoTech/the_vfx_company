@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CardsComponent } from './components/cards/cards.component';
 import { HomeComponent } from './pages/home/home.component';
+import { OurPortfolioComponent } from './pages/our-portfolio/our-portfolio.component';
 import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
 import { TermsAndConditionsComponent } from './pages/terms-and-conditions/terms-and-conditions.component';
 
@@ -19,6 +20,11 @@ const routes: Routes = [
     path:'privacy-policy',
     component: PrivacyPolicyComponent
   },
+  {
+    path:'our-portfolio',
+    component: OurPortfolioComponent
+  },
+
   {
     path:'T&C',
     component: TermsAndConditionsComponent

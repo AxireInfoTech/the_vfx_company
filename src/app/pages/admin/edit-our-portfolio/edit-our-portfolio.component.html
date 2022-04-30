@@ -2,11 +2,11 @@
     <div class="w-2/5 grid grid-cols-1 gap-4">
         <!-- <input class="h-10 rounded-lg bg-white/25 p-4" type="text" id="garage_name" [(ngModel)]="clientData.name" placeholder="Client Name">
     
-        <input class="h-10 rounded-lg bg-white/25 p-4" type="text" id="password" [(ngModel)]="clientData.img" placeholder="img file name">
-        <button class="rounded-lg p-2 bg-buggyorange" (click)="onAddNewPost()">add new post</button> -->
+        <input class="h-10 rounded-lg bg-white/25 p-4" type="text" id="password" [(ngModel)]="clientData.img" placeholder="img file name"> -->
+        <button class="rounded-lg p-2 bg-buggyorange" (click)="onAddNewPost()">add new post</button>
 
         <div *ngFor="let item of ourPortfolioPosts; let i = index">
-            <input  class="h-10 rounded-lg bg-white/25 p-4" type="text"  [(ngModel)]="clientData.posts[i]" placeholder="youtube video id">
+            <input  class="h-10 rounded-lg bg-white/25 p-4" type="text"  [(ngModel)]="ourPortfolioPosts[i]" placeholder="youtube video id">
             <button class="p-2 bg-buggyorange rounded-lg mx-4" (click)="onDeletePost(i)">delete</button>
 
         </div>

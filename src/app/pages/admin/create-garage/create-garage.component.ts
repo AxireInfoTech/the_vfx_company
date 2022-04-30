@@ -13,6 +13,7 @@ export class CreateGarageComponent implements OnInit {
   clientData: client = {
     id: '',
     name: '',
+    review: '',
     img: '',
     posts: ['CNjlbNia9Oc'],
   };

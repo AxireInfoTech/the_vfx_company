@@ -13,12 +13,15 @@ import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.co
 import { TermsAndConditionsComponent } from './pages/terms-and-conditions/terms-and-conditions.component';
 import { AdminModule } from './pages/admin/admin.module';
 import { SafePipe } from './safe.pipe';
+import { OurPortfolioComponent } from './pages/our-portfolio/our-portfolio.component';
+import { ApplicationPipesModule } from './safe-pipe.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     PrivacyPolicyComponent,
     TermsAndConditionsComponent,
+    OurPortfolioComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,7 @@ import { SafePipe } from './safe.pipe';
     NavbarModule,
     FooterModule,
     AdminModule,
-    
+    ApplicationPipesModule
   ],
   providers: [ImgDataService],
   bootstrap: [AppComponent]

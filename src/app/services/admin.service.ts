@@ -64,4 +64,8 @@ export class AdminService implements OnInit {
 
   }
 
+  editOurPortfolio(posts: string[]){
+    return this.http.patch<any>('https://the-vfx-company-default-rtdb.firebaseio.com/ourportfolio/.json',{posts: posts});
+  }
+
 }

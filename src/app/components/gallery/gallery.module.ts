@@ -3,15 +3,16 @@ import { CommonModule } from '@angular/common';
 import { GalleryComponent } from './gallery.component';
 import { RouterModule } from '@angular/router';
 import { NavbarModule } from '../navbar/navbar.module';
-import { SafePipe } from 'src/app/safe.pipe';
+import { ApplicationPipesModule } from 'src/app/safe-pipe.module';
 
 
 @NgModule({
-  declarations: [GalleryComponent, SafePipe],
+  declarations: [GalleryComponent],
   imports: [
     CommonModule,
     RouterModule,
-    NavbarModule
+    NavbarModule,
+    ApplicationPipesModule
   ],
   exports: [GalleryComponent]
 })
