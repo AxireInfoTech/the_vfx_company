@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Client } from 'ionic/lib/http';
+// import { Client } from 'ionic/lib/http';
 import { client } from 'src/app/services/admin.interface';
 import { AdminService } from 'src/app/services/admin.service';
 

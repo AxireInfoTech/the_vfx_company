@@ -15,6 +15,19 @@ import { AdminModule } from './pages/admin/admin.module';
 import { SafePipe } from './safe.pipe';
 import { OurPortfolioComponent } from './pages/our-portfolio/our-portfolio.component';
 import { ApplicationPipesModule } from './safe-pipe.module';
+import { AngularFireModule } from "@angular/fire/compat";
+import { AngularFireAuthModule } from "@angular/fire/compat/auth";
+import { AuthService } from './services/firebaseauth.service';
+
+var config = {
+  apiKey: "AIzaSyD13QkcMLA6LTitQWYtQeG8Sfnn3HSuPeY",
+  authDomain: "the-vfx-company.firebaseapp.com",
+  databaseURL: "https://the-vfx-company-default-rtdb.firebaseio.com",
+  projectId: "the-vfx-company",
+  storageBucket: "the-vfx-company.appspot.com",
+  messagingSenderId: "964343622169",
+  appId: "1:964343622169:web:9b344bc0b3761e7c075888"
+  }
 
 @NgModule({
   declarations: [
@@ -30,9 +43,11 @@ import { ApplicationPipesModule } from './safe-pipe.module';
     NavbarModule,
     FooterModule,
     AdminModule,
-    ApplicationPipesModule
+    ApplicationPipesModule,
+    AngularFireModule.initializeApp(config),
+    AngularFireAuthModule
   ],
-  providers: [ImgDataService],
+  providers: [ImgDataService,AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
