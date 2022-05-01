@@ -6,10 +6,10 @@
         <img class="icon" src="../../../assets/img/clients/client3.png" alt="c" (click)="redirectToGallery('client3')">
     </div>
 </div> -->
-<div class="grid grid-cols-3 bg-[#fff4f0] p-24 gap-12">
+<div class="grid grid-cols-3 sm:grid-cols-1 bg-[#fff4f0] p-24 sm:p-8 gap-12 sm:gap-8">
     <div class="border-2 rounded-3xl border-[#f54504]"  *ngFor="let item of clientData">
         <div class="w-full">
-            <img class="w-1/2 p-8 m-auto" [src]="getUrl(item.img)" alt="">
+            <img class="w-1/2 p-8 sm:p-2 m-auto" [src]="getUrl(item.img)" alt="">
         </div>
         <div class="bg-white rounded-3xl m-4 p-4">
             <p class="text-base font-bold">digital advertising</p>
@@ -22,15 +22,15 @@
     
 </div>
 
-<div class="grid grid-cols-2">
-    <div class="bg-clientReview bg-cover h-[50vw] w-[40vw] flex justify-center items-center">
-        <h1 class="text-5xl font-bold text-right p-12">Clients love our service.</h1>
+<div class="grid grid-cols-2 sm:grid-cols-1 sm:py-6">
+    <div class="bg-clientReview bg-cover h-[50vw] w-[40vw] sm:w-full sm:h-full flex justify-center items-center">
+        <h1 class="text-5xl sm:text-3xl sm:text-center font-bold text-right p-12">Clients love our service.</h1>
     </div>
-    <div class="flex justify-center items-center p-12">
-        <div class="px-20">
+    <div class="flex justify-center items-center p-12 sm:p-4">
+        <div class="px-20 sm:px-8 sm:text-justify">
             <img src="../../../assets/icons/image 13.png" alt="">
-            <p class="py-12 leading-8 text-[#585c65]">The Vfx Company team is nice and well trained. They handle the assignment very professionally. Team is awesome with result oriented. Hope we should go longer together.  Wish you good luck guy’s !!</p>
-            <h1 class="text-3xl font-bold">-Buggie Garages</h1>
+            <p class="py-12 sm:py-4 leading-8 text-[#585c65]">The Vfx Company team is nice and well trained. They handle the assignment very professionally. Team is awesome with result oriented. Hope we should go longer together.  Wish you good luck guy’s !!</p>
+            <h1 class="text-3xl sm:text-xl font-bold">-Buggie Garages</h1>
         </div>
     </div>
 </div>
