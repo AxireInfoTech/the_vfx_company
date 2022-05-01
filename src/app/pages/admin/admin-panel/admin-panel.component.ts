@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 // import { Client } from 'ionic/lib/http';
 import { client } from 'src/app/services/admin.interface';
 import { AdminService } from 'src/app/services/admin.service';
+import { AuthService } from 'src/app/services/firebaseauth.service';
 
 @Component({
   selector: 'app-admin-panel',
@@ -14,7 +15,11 @@ export class AdminPanelComponent implements OnInit {
   clientData: client[] = [];
   ourPortfolioPosts: string[] = [];
 
-  constructor(private adminService: AdminService,private router : Router) { }
+  constructor(
+    private adminService: AdminService,
+    private router : Router,
+    private authService: AuthService
+    ) { }
 
   ngOnInit(): void {
     if(this.adminService.admin_username == '' && this.adminService.admin_password == ''){
@@ -74,6 +79,10 @@ export class AdminPanelComponent implements OnInit {
       console.log(err.error);
     })
     // console.log(id);
+  }
+
+  logOut(){
+    this.authService.SignOut();
   }
 
 }
