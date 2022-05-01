@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CardsComponent } from './components/cards/cards.component';
+import { AuthGuard } from './guards/auth.guard';
 import { HomeComponent } from './pages/home/home.component';
 import { OurPortfolioComponent } from './pages/our-portfolio/our-portfolio.component';
 import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
@@ -47,7 +48,7 @@ const routes: Routes = [
   },
   { 
     path: 'admin',
-    loadChildren: () => import('./pages/admin/admin.module').then(m => m.AdminModule) 
+    loadChildren: () => import('./pages/admin/admin.module').then(m => m.AdminModule) ,
   },
   { path: '**', redirectTo: 'home', pathMatch: 'full' }
 

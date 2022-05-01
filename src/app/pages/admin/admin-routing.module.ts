@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from 'src/app/guards/auth.guard';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 import { CreateGarageComponent } from './create-garage/create-garage.component';
@@ -9,10 +10,11 @@ import { EditOurPortfolioComponent } from './edit-our-portfolio/edit-our-portfol
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: AdminLoginComponent },
-  { path: 'panel', component: AdminPanelComponent },
-  { path: 'create', component: CreateGarageComponent },
-  { path: 'edit', component: EditGarageComponent },
-  { path: 'edit-ourportfolio', component: EditOurPortfolioComponent },
+  { path: 'panel', component: AdminPanelComponent,     canActivate: [AuthGuard]
+},
+  { path: 'create', component: CreateGarageComponent, canActivate: [AuthGuard] },
+  { path: 'edit', component: EditGarageComponent, canActivate: [AuthGuard] },
+  { path: 'edit-ourportfolio', component: EditOurPortfolioComponent, canActivate: [AuthGuard] },
 ];
 
 @NgModule({
