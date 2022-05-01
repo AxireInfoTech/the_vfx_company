@@ -23,6 +23,7 @@ export class AdminLoginComponent implements OnInit {
   }
 
   onLogin(){
+    console.log(this.admin_username, this.admin_password)
     this.authService.SignIn(this.admin_username,this.admin_password);
     // this.router.navigate(['/admin/panel']);
   }

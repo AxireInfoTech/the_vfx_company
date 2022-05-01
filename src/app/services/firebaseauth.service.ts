@@ -82,7 +82,8 @@ export class AuthService {
   // Returns true when user is looged in and email is verified
   get isLoggedIn(): boolean {
     const user = JSON.parse(localStorage.getItem('user')!);
-    return user !== null && user.emailVerified !== false ? true : false;
+    console.log(user)
+    return user !== null ? true : false;
   }
   
   // Auth logic to run auth providers
