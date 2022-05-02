@@ -81,6 +81,7 @@ export class AdminPanelComponent implements OnInit {
     // console.log(id);
   }
 
+  
   logOut(){
     this.authService.SignOut();
   }

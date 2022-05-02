@@ -1,7 +1,9 @@
 <h1 class="text-4xl font-semibold text-center py-8">{{ client }}</h1>
 
-<div class="min-h-screen min-w-full grid grid-cols-2 sm:grid-cols-1 p-24 sm:p-4 gap-8 sm:gap-4">
-        <div class="h-96" *ngFor="let item of posts; let i = index" [ngClass]="{' row-span-2 col-span-2 sm:row-span-1 sm:col-span-1': (i+1)%3 == 0}">
-                <iframe  [src]="getLink(item) | safe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="min-h-screen min-w-full">
+        <div class=" grid grid-cols-2  p-24 sm:p-2 gap-8 sm:gap-2">
+                <div class="h-80 sm:h-[100px] rounded-2xl sm:rounded-md" *ngFor="let item of posts; let i = index" [ngClass]="{' row-span-2 col-span-2 h-[480px] sm:h-[200px]': (i+1)%3 == 0}">
+                        <iframe class="rounded-2xl sm:rounded-md"  [src]="getLink(item) | safe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
         </div>
 </div>

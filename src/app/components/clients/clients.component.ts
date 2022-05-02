@@ -41,7 +41,7 @@ export class ClientsComponent implements OnInit {
   }
 
   getUrl(img: string){
-    return "https://thevfxcompany.in/clients/"+img+".png"
+    return "assets/clients/"+img+".png"
   }
 
 }
