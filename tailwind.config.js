@@ -22,6 +22,8 @@ module.exports = {
         'ourOffering': "url('./assets/img/ourOffering-bg.png')",
         'homebutton': 'linear-gradient(111.32deg, #3D5374 -9.86%, #151F25 100%)',
         'clientReview': "url('./assets/img/client-review.svg')",
+        'remove': "url()",
+
       },
       borderImage: {
         'ourOffering': "url('./assets/img/our-offering-border.png')"

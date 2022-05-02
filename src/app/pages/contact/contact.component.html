@@ -32,7 +32,7 @@
     
             </div>
             <div class="text-2xl font-semibold text-center my-4">
-                <p>XYZ, ABC Complex,</p>
+                <p>Rajkot</p>
                 <p>Gujarat, India</p>
             </div>
         </div>
@@ -47,10 +47,10 @@
     
             </div>
             <div class="text-2xl font-semibold text-center my-4">
-                <p>contact@thevfxcompany.in</p>
+                <p> <a href="mailto:contact@thevfxcompany.in">contact@thevfxcompany.in</a> </p>
             </div>
             <div class="text-2xl font-semibold text-center my-4">
-                <p>+91 96647 59897</p>
+                <p> <a href="tel:+919664759897">+91 96647 59897</a> </p>
             </div>
         </div>
         <div class="bg-white shadow-contactbox rounded-lg w-full py-12 my-8">
@@ -90,7 +90,7 @@
 
         </div>
         <div class="text-2xl font-semibold text-center my-4">
-            <p>XYZ, ABC Complex,</p>
+            <p>Rajkot</p>
             <p>Gujarat, India</p>
         </div>
     </div>
@@ -105,10 +105,10 @@
 
         </div>
         <div class="text-2xl font-semibold text-center my-4">
-            <p>contact@thevfxcompany.in</p>
+            <p> <a href="mailto:contact@thevfxcompany.in">contact@thevfxcompany.in</a> </p>
         </div>
         <div class="text-2xl font-semibold text-center my-4">
-            <p>+91 96647 59897</p>
+            <p> <a href="tel:+919664759897">+91 96647 59897</a> </p>
         </div>
     </div>
     <div class="bg-white shadow-contactbox rounded-lg w-full py-12 my-8">
@@ -136,20 +136,24 @@
 </div>
 
 <div class="w-full p-12 px-36 sm:px-12">
+    <form action="" (submit)="sendEmail($event)">
     <div class="w-full my-4">
             <label class="block w-full font-bold text-xl " for="name">Name</label>
-            <input id="name" [(ngModel)]="name" class="w-full border-b-[1px] text-2xl sm:text-xl border-black " placeholder="Your name goes here" type="text">
+            <input id="name" name="name" [(ngModel)]="name" class="w-full border-b-[1px] text-2xl sm:text-xl border-black " placeholder="Your name goes here" type="text">
     </div>
     <div class="w-full my-4">
         <label class="block w-full font-bold text-xl " for="mail">Mail</label>
-        <input id="mail" [(ngModel)]="email" class="w-full border-b-[1px] text-2xl sm:text-xl border-black " placeholder="Enter your email address here" type="text">
+        <input id="email" name="email" [(ngModel)]="email" class="w-full border-b-[1px] text-2xl sm:text-xl border-black " placeholder="Enter your email address here" type="text">
     </div>
     <div class="w-full my-4">
         <label class="block w-full font-bold text-xl " for="message">Message</label>
-        <textarea id="message" [(ngModel)]="message" class="w-full border-b-[1px] text-2xl sm:text-xl border-black h-24 sm:h-36" placeholder="Your message goes here..." type="text"></textarea>
+        <textarea id="message" name="message" [(ngModel)]="message" class="w-full border-b-[1px] text-2xl sm:text-xl border-black h-24 sm:h-36" placeholder="Your message goes here..." type="text"></textarea>
     </div>
     <div>
-        <button class="bg-[#FD6A5E] text-white text-2xl font-bold w-fit p-2 px-4 rounded-sm"> <img class="h-6 inline-block " src="../../../assets/icons/bi_send-fill.png" alt=""> Send</button>
-    </div>
+        <button type="submit" class="bg-[#FD6A5E] text-white text-2xl font-bold w-fit p-2 px-4 rounded-sm"> <img class="h-6 inline-block " src="../../../assets/icons/bi_send-fill.png" alt=""> Send</button>
+        <p *ngIf="successStatus"  class="inline-block p-4 text-green-900 success status"><i class="far fa-check-circle"></i> message sent successfully</p>
+        <p *ngIf="!successStatus && error !== ''" class="inline-block p-4 text-red-700 error status">failed. {{ error }}</p>
 
+    </div>
+    </form>
 </div>
