@@ -1,0 +1,175 @@
+<div class="font-['Poppins']">
+  <div class="relative sm:hidden">
+    <div
+      class="z-[-9] h-full absolute top-0 left-0 w-3/4 bg-cover bg-no-repeat bg-center"
+    >
+      <img
+        class="w-full h-full"
+        src="../../../../assets/img/Shape Background.png"
+        alt=""
+      />
+    </div>
+    <div class="h-full w-full grid grid-cols-7">
+      <div class="col-span-4 flex items-center p-8">
+        <div class="">
+          <div class="text-5xl text-[#333333] leading-relaxed">
+            {{ blogData[blogId - 1]?.title }}
+          </div>
+        </div>
+      </div>
+      <div class="col-span-3 p-20 relative">
+        <div class="mr-20 relative">
+          <img
+            class="w-full"
+            [src]="'../../../../assets/img/blog' + blogId + '.png'"
+            alt=""
+          />
+          <div
+            class="absolute w-1/2 top-0 left-[80%] bg-white p-4 rounded-lg shadow-md"
+          >
+            <img
+              class="w-full p-2"
+              src="../../../../assets/img/22 1.png"
+              alt=""
+            />
+            <p class="text-xs">
+              74% of respondents buy a product after viewing a video.
+            </p>
+          </div>
+          <div
+            class="w-full absolute top-[90%] right-[50%] flex items-center p-4 bg-white shadow-md rounded-md"
+          >
+            <img
+              class="w-[20%] p-2"
+              src="../../../../assets/img/Untitled-1 1.png"
+              alt=""
+            />
+            <p class="w-[80%] text-xs p-2">
+              65% of online researchers visit a brand website and 39% call the
+              brand after watching their videos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-[#FFF4F0] hidden sm:block p-8">
+    <div class="">
+      <div class="text-3xl text-[#333333] leading-relaxed">
+        {{ blogData[blogId - 1]?.title }}
+      </div>
+    </div>
+    <div>
+      <img [src]="'../../../../assets/img/blog' + blogId + '.png'" alt="" />
+    </div>
+  </div>
+  <div class="grid grid-cols-10 p-12 sm:grid-cols-1 sm:p-4">
+    <div class="col-span-7 sm:col-span-1 p-8 sm:p-1">
+      <app-blog1 *ngIf="blogId == 1"></app-blog1>
+      <app-blog2 *ngIf="blogId == 2"></app-blog2>
+      <app-blog3 *ngIf="blogId == 3"></app-blog3>
+    </div>
+    <div class="col-span-3 sm:col-span-1 p-8 sm:p-1">
+      <div>
+        <h1 class="font-bold text-[#333333] my-2">Popular Posts</h1>
+        <div>
+          <div
+            class="grid grid-cols-10 m-2 cursor-pointer"
+            *ngFor="let item of blogData; let i = index"
+            routerLink="/blogs/{{ item.id }}"
+          >
+            <img
+              class="col-span-2 p-2"
+              [src]="'../../../../assets/img/blog' + (i + 1) + '.png'"
+              alt=""
+            />
+            <div class="col-span-8 flex items-center">
+              <div>
+                <h2 class="font-semibold text-sm">{{ item?.sortTitle }}</h2>
+                <p class="text-xs">{{ item?.date }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h1 class="font-bold text-[#333333] my-2">Tags</h1>
+        <div>
+          <div
+            class="bg-[#F96F60] m-1 px-2 py-1 rounded-md text-white inline-block"
+          >
+            the vfx company
+          </div>
+          <div
+            class="bg-[#F96F60] m-1 px-2 py-1 rounded-md text-white inline-block"
+          >
+            Motion graphics
+          </div>
+          <div
+            class="bg-[#F96F60] m-1 px-2 py-1 rounded-md text-white inline-block"
+          >
+            digital advertising
+          </div>
+          <div
+            class="bg-[#F96F60] m-1 px-2 py-1 rounded-md text-white inline-block"
+          >
+            Motion branding
+          </div>
+          <div
+            class="bg-[#F96F60] m-1 px-2 py-1 rounded-md text-white inline-block"
+          >
+            Motion graphics rajkot
+          </div>
+          <div
+            class="bg-[#F96F60] m-1 px-2 py-1 rounded-md text-white inline-block"
+          >
+            startup india
+          </div>
+        </div>
+      </div>
+      <div>
+        <h1 class="font-bold text-[#333333] my-2">Our Social Media</h1>
+        <div class="grid grid-cols-4 m-4">
+          <div class="">
+            <a href="https://www.linkedin.com/company/thevfxcompany/">
+              <img
+                class="w-full p-4"
+                src="../../../../assets/icons/ln.png"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="">
+            <a href="https://www.instagram.com/tvcoindia/">
+              <img
+                class="w-full p-4"
+                src="../../../../assets/icons/Ig.png"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="">
+            <a
+              href="https://twitter.com/WeareTVC?t=wA1rMbTwIGx1-gWM86On4A&s=09"
+            >
+              <img
+                class="w-full p-4"
+                src="../../../../assets/icons/Tw.png"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="">
+            <a href="https://www.youtube.com/channel/UCWgoITeJ-47VLHfbJacRjpw">
+              <img
+                class="w-full p-4"
+                src="../../../../assets/icons/Yt.png"
+                alt=""
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
