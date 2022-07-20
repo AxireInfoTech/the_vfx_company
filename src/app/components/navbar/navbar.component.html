@@ -30,72 +30,145 @@
 </div> -->
 
 <div class="w-full grid grid-cols-4 bg-[#FFF4F0] shadow-md sm:hidden">
-    <div class=" h-24 p-3  col-span-1">
-        <img class="h-full" src="../../../assets/img/logo.png" alt="">
-    </div>
-    <div class="flex items-center  col-span-3">
-        <div class="w-1/5"></div>
-        <div class="w-4/5 grid grid-cols-5 ">
-            <div>
-                <a class="text-lg" routerLink="/home" routerLinkActive="border-b-2 border-[#EEA900]" href="">Home</a>
-            </div>
-            <div>
-                <a class="text-lg" routerLink="/offerings" routerLinkActive="border-b-2 border-[#EEA900]" href="">Our Offerings</a>
-            </div>
-            <div>
-                <a class="text-lg" routerLink="/blogs" routerLinkActive="border-b-2 border-[#EEA900]" href="">Blogs</a>
-            </div>
+  <div class="h-24 p-3 col-span-1">
+    <img class="h-full" src="../../../assets/img/logo.png" alt="" />
+  </div>
+  <div class="flex items-center col-span-3">
+    <div class="w-1/5"></div>
+    <div class="w-4/5 grid grid-cols-5 text-center">
+      <div>
+        <a
+          class="text-lg"
+          routerLink="/home"
+          routerLinkActive="border-b-2 border-[#EEA900] font-bold"
+          href=""
+          >Home</a
+        >
+      </div>
+      <div>
+        <a
+          class="text-lg"
+          routerLink="/offerings"
+          routerLinkActive="border-b-2 border-[#EEA900] font-bold"
+          href=""
+          >Our Offerings</a
+        >
+      </div>
+      <div>
+        <a
+          class="text-lg"
+          routerLink="/blogs"
+          routerLinkActive="border-b-2 border-[#EEA900] font-bold"
+          href=""
+          >Blogs</a
+        >
+      </div>
 
-            <div>
-                <a class="text-lg" routerLink="/aboutus" routerLinkActive="border-b-2 border-[#EEA900]" href="">About Us</a>
-            </div>
-            <div>
-                <a class="text-lg" routerLink="/contactus" routerLinkActive="border-b-2 border-[#EEA900]" href="">Contact Us</a>
-            </div>
-    
-        </div>
+      <div>
+        <a
+          class="text-lg"
+          routerLink="/aboutus"
+          routerLinkActive="border-b-2 border-[#EEA900] font-bold"
+          href=""
+          >About Us</a
+        >
+      </div>
+      <div>
+        <a
+          class="text-lg"
+          routerLink="/contactus"
+          routerLinkActive="border-b-2 border-[#EEA900] font-bold"
+          href=""
+          >Contact Us</a
+        >
+      </div>
     </div>
+  </div>
 </div>
-
-
 
 <!-- mobileview -->
 <div *ngIf="!showMenu" class="h-20 bg-[#FFF4F0] shadow-lg hidden sm:block">
-    <div class="float-left ml-4 h-full flex items-center">
-        <img class="h-[80%]" src="../../../assets/img/logo.png" alt="">
-    </div>
-    <div class="float-right h-full flex items-center justify-around text-[#273740] ">
-        <img (click)="showMenu = !showMenu" class="h-6 mr-4" src="../../../assets/icons/hamburger.svg" alt="">
-    </div>
+  <div class="float-left ml-4 h-full flex items-center">
+    <img class="h-[80%]" src="../../../assets/img/logo.png" alt="" />
+  </div>
+  <div
+    class="float-right h-full flex items-center justify-around text-[#273740]"
+  >
+    <img
+      (click)="showMenu = !showMenu"
+      class="h-6 mr-4"
+      src="../../../assets/icons/hamburger.svg"
+      alt=""
+    />
+  </div>
 </div>
 
-<div *ngIf="showMenu" class="hidden sm:block fixed top-0 left-0 h-screen w-screen bg-[#FFF4F0] z-50">
-    <div class="h-20  ">
-
-        <div class="float-left ml-4 h-full flex items-center">
-            <img class="h-[80%]" src="../../../assets/img/logo.png" alt="">
-        </div>
-        <div class="float-right h-full flex items-center justify-around text-[#273740] ">
-            <img (click)="showMenu = !showMenu" class="h-6 mr-4" src="../../../assets/icons/close.svg" alt="">
-        </div>
+<div
+  *ngIf="showMenu"
+  class="hidden sm:block fixed top-0 left-0 h-screen w-screen bg-[#FFF4F0] z-50"
+>
+  <div class="h-20">
+    <div class="float-left ml-4 h-full flex items-center">
+      <img class="h-[80%]" src="../../../assets/img/logo.png" alt="" />
     </div>
-    <div class="text-center p-4">
-        <p class="p-6 text-[#273740] font-semibold" (click)="showMenu=!showMenu">        
-            <a class="p-4 text-xl rounded-md" href="" routerLink="/home" routerLinkActive="border-b-2 border-[#EEA900]">Home</a>
-        </p>
-        <p class="p-6 text-[#273740] font-semibold" (click)="showMenu=!showMenu">        
-            <a class="p-4 text-xl rounded-md" href="" routerLink="/offerings" routerLinkActive="border-b-2 border-[#EEA900]">Our Offering</a>
-        </p>
-        <p class="p-6 text-[#273740] font-semibold" (click)="showMenu=!showMenu">        
-            <a class="p-4 text-xl rounded-md" href="" routerLink="/blogs" routerLinkActive="border-b-2 border-[#EEA900]">Blogs</a>
-        </p>
-
-        <p class="p-6 text-[#273740] font-semibold" (click)="showMenu=!showMenu">        
-            <a class="p-4 text-xl rounded-md" href="" routerLink="/aboutus" routerLinkActive="border-b-2 border-[#EEA900]">About Us</a>
-        </p>
-
-        <p class="p-6 text-[#273740] font-semibold" (click)="showMenu=!showMenu">        
-            <a class="p-4 text-xl rounded-md" href="" routerLink="/contactus" routerLinkActive="border-b-2 border-[#EEA900]">Contact Us</a>
-        </p>
+    <div
+      class="float-right h-full flex items-center justify-around text-[#273740]"
+    >
+      <img
+        (click)="showMenu = !showMenu"
+        class="h-6 mr-4"
+        src="../../../assets/icons/close.svg"
+        alt=""
+      />
     </div>
+  </div>
+  <div class="text-center p-4">
+    <p class="p-6 text-[#273740] font-semibold" (click)="showMenu = !showMenu">
+      <a
+        class="p-4 text-xl rounded-md"
+        href=""
+        routerLink="/home"
+        routerLinkActive="border-b-2 border-[#EEA900]"
+        >Home</a
+      >
+    </p>
+    <p class="p-6 text-[#273740] font-semibold" (click)="showMenu = !showMenu">
+      <a
+        class="p-4 text-xl rounded-md"
+        href=""
+        routerLink="/offerings"
+        routerLinkActive="border-b-2 border-[#EEA900]"
+        >Our Offering</a
+      >
+    </p>
+    <p class="p-6 text-[#273740] font-semibold" (click)="showMenu = !showMenu">
+      <a
+        class="p-4 text-xl rounded-md"
+        href=""
+        routerLink="/blogs"
+        routerLinkActive="border-b-2 border-[#EEA900]"
+        >Blogs</a
+      >
+    </p>
+
+    <p class="p-6 text-[#273740] font-semibold" (click)="showMenu = !showMenu">
+      <a
+        class="p-4 text-xl rounded-md"
+        href=""
+        routerLink="/aboutus"
+        routerLinkActive="border-b-2 border-[#EEA900]"
+        >About Us</a
+      >
+    </p>
+
+    <p class="p-6 text-[#273740] font-semibold" (click)="showMenu = !showMenu">
+      <a
+        class="p-4 text-xl rounded-md"
+        href=""
+        routerLink="/contactus"
+        routerLinkActive="border-b-2 border-[#EEA900]"
+        >Contact Us</a
+      >
+    </p>
+  </div>
 </div>
