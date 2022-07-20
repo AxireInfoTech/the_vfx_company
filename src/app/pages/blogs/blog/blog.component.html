@@ -12,7 +12,7 @@
     <div class="h-full w-full grid grid-cols-7">
       <div class="col-span-4 flex items-center p-8">
         <div class="">
-          <div class="text-5xl text-[#333333] leading-relaxed">
+          <div class="text-5xl text-[#333333] font-bold leading-relaxed">
             {{ blogData[blogId - 1]?.title }}
           </div>
         </div>
@@ -55,7 +55,7 @@
   </div>
   <div class="bg-[#FFF4F0] hidden sm:block p-8">
     <div class="">
-      <div class="text-3xl text-[#333333] leading-relaxed">
+      <div class="text-3xl text-[#333333] font-bold leading-relaxed">
         {{ blogData[blogId - 1]?.title }}
       </div>
     </div>
@@ -70,28 +70,6 @@
       <app-blog3 *ngIf="blogId == 3"></app-blog3>
     </div>
     <div class="col-span-3 sm:col-span-1 p-8 sm:p-1">
-      <div>
-        <h1 class="font-bold text-[#333333] my-2">Popular Posts</h1>
-        <div>
-          <div
-            class="grid grid-cols-10 m-2 cursor-pointer"
-            *ngFor="let item of blogData; let i = index"
-            routerLink="/blogs/{{ item.id }}"
-          >
-            <img
-              class="col-span-2 p-2"
-              [src]="'../../../../assets/img/blog' + (i + 1) + '.png'"
-              alt=""
-            />
-            <div class="col-span-8 flex items-center">
-              <div>
-                <h2 class="font-semibold text-sm">{{ item?.sortTitle }}</h2>
-                <p class="text-xs">{{ item?.date }}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       <div>
         <h1 class="font-bold text-[#333333] my-2">Tags</h1>
         <div>
@@ -128,45 +106,24 @@
         </div>
       </div>
       <div>
-        <h1 class="font-bold text-[#333333] my-2">Our Social Media</h1>
-        <div class="grid grid-cols-4 m-4">
-          <div class="">
-            <a href="https://www.linkedin.com/company/thevfxcompany/">
-              <img
-                class="w-full p-4"
-                src="../../../../assets/icons/ln.png"
-                alt=""
-              />
-            </a>
-          </div>
-          <div class="">
-            <a href="https://www.instagram.com/tvcoindia/">
-              <img
-                class="w-full p-4"
-                src="../../../../assets/icons/Ig.png"
-                alt=""
-              />
-            </a>
-          </div>
-          <div class="">
-            <a
-              href="https://twitter.com/WeareTVC?t=wA1rMbTwIGx1-gWM86On4A&s=09"
-            >
-              <img
-                class="w-full p-4"
-                src="../../../../assets/icons/Tw.png"
-                alt=""
-              />
-            </a>
-          </div>
-          <div class="">
-            <a href="https://www.youtube.com/channel/UCWgoITeJ-47VLHfbJacRjpw">
-              <img
-                class="w-full p-4"
-                src="../../../../assets/icons/Yt.png"
-                alt=""
-              />
-            </a>
+        <h1 class="font-bold text-[#333333] my-2">Popular Posts</h1>
+        <div>
+          <div
+            class="grid grid-cols-10 m-2 cursor-pointer"
+            *ngFor="let item of blogData; let i = index"
+            routerLink="/blogs/{{ item.url }}"
+          >
+            <img
+              class="col-span-2 p-2"
+              [src]="'../../../../assets/img/blog' + (i + 1) + '.png'"
+              alt=""
+            />
+            <div class="col-span-8 flex items-center">
+              <div>
+                <h2 class="font-semibold text-sm">{{ item?.sortTitle }}</h2>
+                <p class="text-xs">{{ item?.date }}</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
