@@ -6,35 +6,62 @@
         <img class="icon" src="../../../assets/img/clients/client3.png" alt="c" (click)="redirectToGallery('client3')">
     </div>
 </div> -->
-<div
-  class="grid grid-cols-3 sm:grid-cols-1 bg-[#fff4f0] p-24 sm:p-4 gap-12 sm:gap-8"
->
+<div class="bg-[#fff4f0] p-24 sm:hidden">
+  <owl-carousel-o [options]="customOptions">
+    <ng-template carouselSlide *ngFor="let item of clientData">
+      <div class="border-2 rounded-3xl border-[#f54504] m-4">
+        <div class="flex justify-center">
+          <div class="w-1/2 inline-block">
+            <img class="w-1/2" [src]="getUrl(item.img)" alt="" />
+          </div>
+        </div>
+        <div class="bg-white rounded-3xl p-4 m-4">
+          <p class="text-base font-bold">digital advertising</p>
+          <h1 class="text-2xl font-bold py-4">{{ item.name }}</h1>
+          <p class="text-base font-bold">
+            <a [routerLink]="'../our-work/' + item.name.split(' ').join('')">
+              visit
+              <div class="w-[6px] inline-block">
+                <img
+                  class="inline-block scale-90 visitArrow"
+                  src="../../../assets/icons/Vector.png"
+                  alt=""
+                />
+              </div>
+            </a>
+          </p>
+        </div>
+        <div
+          class="w-full sm:w-[30%] hidden rounded-xl bg-[#fff4f0] border-[1px] border-[#f54504]"
+        >
+          <img class="w-1/2 p-8 m-auto" [src]="getUrl(item.img)" alt="" />
+        </div>
+      </div>
+    </ng-template>
+  </owl-carousel-o>
+</div>
+
+<div class="bg-[#fff4f0] p-24 sm:p-4 hidden sm:block">
   <div
-    class="border-2 rounded-3xl border-[#f54504] sm:bg-white sm:rounded-lg sm:border-0 sm:flex sm:items-center sm:justify-around"
     *ngFor="let item of clientData"
+    class="border-2 rounded-3xl border-[#f54504] sm:bg-white sm:rounded-lg sm:border-0 sm:flex sm:items-center sm:justify-around m-4"
   >
-    <div class="w-full sm:w-[50%] sm:float-right sm:hidden">
-      <img
-        class="w-1/2 sm:w-full p-4 sm:p-2 m-auto"
-        [src]="getUrl(item.img)"
-        alt=""
-      />
-    </div>
     <div class="bg-white sm:w-[50%] rounded-3xl m-4 sm:m-2 p-4 sm:p-2">
       <p class="text-base sm:text-sm font-bold">digital advertising</p>
       <h1 class="text-2xl sm:text-lg font-bold py-4">{{ item.name }}</h1>
       <p class="text-base sm:text-sm font-bold">
-        <a [routerLink]="'../our-work/' + item.name"
-          >visit
+        <a [routerLink]="'../our-work/' + item.name.split(' ').join('')">
+          visit
           <img
             class="inline-block mb-[2px] scale-90"
             src="../../../assets/icons/Vector.png"
             alt=""
-        /></a>
+          />
+        </a>
       </p>
     </div>
     <div
-      class="w-full sm:w-[30%] sm:float-right hidden rounded-xl bg-[#fff4f0] border-[1px] border-[#f54504] sm:block"
+      class="w-full sm:w-[30%] sm:float-right rounded-xl bg-[#fff4f0] border-[1px] border-[#f54504]"
     >
       <img
         class="w-1/2 sm:w-full p-8 sm:p-2 m-auto"
